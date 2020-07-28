@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+html,body{
+  margin:0;
+  padding: 0;
+}
+.main-container{
+  background: var(--color-background-primary);
+  padding: 3rem;;
+}
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+}
+.column1 {
+  flex: 1;
+  order: 1;
+  padding: 1rem 0.35rem;
+  margin-bottom: 3%;
+}
+.column2 {
+  flex: 1;
+  order: 2;
+  padding: 1rem 0.35rem;
+  margin-bottom: 3%;
+}
+.column3 {
+  flex: 1;
+  order: 3;
+  padding: 1rem 0.35rem;
+  margin-bottom: 3%;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.flex-column::before{
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 2px solid var(--color-border);
+  top: 0;
+  left: 0px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-control{
+  background: var(--color-background-primary);
+  box-shadow: none;
+  border: none;
+  padding: 5%;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button{
+  color: #fff;
+  background-color: var(--color-button);
+  border:none;
+  border-radius: 10px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+.submit-btn {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.submit-btn[disabled] {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: .65;
+  box-shadow: none;
+}
+
+.theme-btn-wrapper{
+  padding-left: 1.4rem;
+}
+.btn-light{
+  background: var(--color-button-light);
+  padding: 0.5rem 1.5rem;
+  margin-right: 1.5rem;
+}
+.btn-dark{
+  background: var(--color-button-dark);
+  padding: 0.5rem 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.section1 {
+  background: var(--color-background-secondary);
+  border-radius: 25px;
+  padding: 7% 9%;
+  margin: .75rem .75rem 1.5rem;
+}
+.section2 {
+  background: var(--color-background-secondary);
+  border-radius: 25px;
+  padding: 7% 9%;
+  margin: .75rem;
+}
+.section3 {
+  background: var(--color-background-secondary);
+  border-radius: 25px;
+  padding: 7% 9% 14%;
+  margin: .75rem;
+}
+.section4 {
+  background: var(--color-background-secondary);
+  border-radius: 25px;
+  padding: 7% 9% 23%;
+  margin: .75rem;
+}
+img{
+  max-width: 80%;
+}
+.card-wrapper{
+  margin-bottom: 0.75rem;
+}
+.card-custom{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  max-width: 800px;
+  margin-bottom: 2%;
+}
+
+.card-description{
+  width: 68%;
+}
+.card-imgage{
+  width: 25%;
+  max-width: 100px;
+}
+.rounded-circle1 {
+    border-radius: 16px;
+}
+.heading {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.profile-name{
+  color: var(--color-text-profile);
+  margin-top: 8px;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+h3.profile-name{
+  font-size: 15px;
+}
+.profile-band {
+  color: var(--color-text-designation);
+  margin-top: 2px;
+  font-size: 11px;
+}
+.description {
+  color: var(--color-text-secondary);
+  opacity: 60%;
+  margin-bottom: 8%;
+  margin-top: 2%;
+  font-size: 11px;
+}
+.statistic-wrapper{
+  display:flex;
+  flex-direction: row;
+}
+.stat {
+  width: 100%
+}
+.stat-text{
+  color: var(--color-text-common);
+  opacity: 60%;
+}
+.stat-value{
+  color: var(--color-text-common);
+  font-weight: 700;
+}
+.form-labl{
+  color: var(--color-text-common);
+  font-weight: 300;
+  font-size: 12px;
+}
+.form-note{
+  color: var(--color-text-designation);
+  font-size: 12px;
+}
+.error-message{
+  color: #ff304c;
+  font-size: 10px;
+  margin-top: 2px;
+}
+@media (min-width : 320px) and (max-width : 769px) {
+  .main-container{
+    padding: 0.5rem;
+  }
+  .wrapper{
+    flex-direction: column;
+    flex-flow: column;
+  }
+  .form-control{
+    padding: 5%;
+  }
+  .btn-light {
+    padding: 0.5rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .btn-dark {
+    padding: 0.5rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+@media (min-width : 769px) and (max-width : 1024px) and (orientation : portrait) {
+  .main-container{
+    padding: 2rem;
+  }
+  .wrapper{
+    flex-direction: column;
+    flex-flow: column;
+  }
+  .form-control{
+    padding: 5%;
+  }
+  .flex-column{
+    flex-direction: row;
+  }
+}
+@media (min-width : 769px) and (max-width : 1024px) and (orientation : landscape) {
+  .main-container{
+    padding: 2rem;
+  }
+  .wrapper{
+    flex-direction: row;
+    flex-flow: row;
+  }
+  .form-control{
+    padding: 5%;
+  }
+  .flex-column{
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+}

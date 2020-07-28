@@ -1,0 +1,44 @@
+:root {
+  --color-background-primary: #F1E8E6;
+  --color-background-secondary: #FFFFFF;
+  --color-button: #FB5951;
+  --color-button-light: #FB5951;
+  --color-button-dark: #000000;
+  --color-text-primary: #333333;
+  --color-text-secondary: #333333;
+  --color-text-designation: #F59651;
+  --color-text-profile: #333333;
+  --color-text-common: #333333;
+  --color-text-error: #ff304c;
+  --color-border: #ff304c;
+}
+
+body.light {
+  --color-background-primary: #F1E8E6;
+  --color-background-secondary: #FFFFFF;
+  --color-button: #FB5951;
+  --color-button-light: #FB5951;
+  --color-button-dark: #000000;
+  --color-text-primary: #333333;
+  --color-text-secondary: #333333;
+  --color-text-designation: #F59651;
+  --color-text-profile: #333333;
+  --color-text-common: #333333;
+  --color-text-error: #ff304c;
+  --color-border: #ff304c;;
+}
+
+body.dark {
+  --color-background-primary: #232F5A;
+  --color-background-secondary: #1A223F;
+  --color-button: #3E64FA;
+  --color-button-light: #3E64FA;
+  --color-button-dark: #000000;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F5F5F5;
+  --color-text-designation: #21BBDB;
+  --color-text-profile: #FFFFFF;
+  --color-text-common: #F5F5F5;
+  --color-text-error: #ad1f1f;
+  --color-border: #3E64FA;;
+}

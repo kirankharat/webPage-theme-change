@@ -1,0 +1,145 @@
+<div class="main-container">
+  <div theme class="theme-btn-wrapper">
+    <section>
+      <button class="button btn-light" (click)="chnageTheme('light')">Light Theme</button>
+      <button class="button btn-dark" (click)="chnageTheme('dark')">Dark Theme</button>
+    </section>
+  </div>
+  <div  class="wrapper">
+    <div class="column1">
+      <div class="section1">
+        <h4 class="heading">My Profile</h4>
+        <h6 class="description">Check out each coloumn for more details</h6>
+        <div class="card-wrapper">
+          <div class="card-custom">
+            <div class="card-imgage">
+              <img class="card-img rounded-circle1" src="https://picsum.photos/200/200" alt="Card image cap">
+            </div>
+            <div class="card-description">
+              <h3 class="card-title profile-name">John Doe</h3>
+              <h5 class="card-title profile-band">Senior Project Manager</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section2">
+        <h4 class="heading">Statistic</h4>
+        <h6 class="description">Check out each coloumn for more details</h6>
+        <div class="statistic-wrapper">
+          <div class="stat flex-direction-row">
+              <div class="flex-column">
+                <span></span>
+                <span class="stat-text">In Service</span>
+                <span class="stat-value">$ 247.49</span>
+              </div>
+              <div class="flex-column">
+                <span></span>
+                <span class="stat-text">Service needed</span>
+                <span class="stat-value">$ 247.49</span>
+              </div>
+          </div>
+          <div class="stat flex-direction-row">
+              <div class="flex-column">
+                <span></span>
+                <span class="stat-text">Fully serviced</span>
+                <span class="stat-value">$ 247.49</span>
+              </div>
+              <div class="flex-column">
+                <span></span>
+                <span class="stat-text">Pending</span>
+                <span class="stat-value">$ 247.49</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="section3">
+        <h4 class="heading">My Profile</h4>
+        <h6 class="description">Check out each coloumn for more details</h6>
+        <div class="card-wrapper">
+          <div class="card-custom">
+            <div class="card-imgage">
+              <img class="card-img rounded-circle1" src="https://picsum.photos/200/200" alt="Card image cap">
+            </div>
+            <div class="card-description">
+              <h4 class="card-title profile-name">Jack neo</h4>
+              <h5 class="card-title profile-band">Java Developer</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-custom">
+            <div class="card-imgage">
+              <img class="card-img rounded-circle1" src="https://picsum.photos/200/200" alt="Card image cap">
+            </div>
+            <div class="card-description">
+              <h4 class="card-title profile-name">Alex Ferguson</h4>
+              <h5 class="card-title profile-band">IT Director</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-custom">
+            <div class="card-imgage">
+              <img class="card-img rounded-circle1" src="https://picsum.photos/200/200" alt="Card image cap">
+            </div>
+            <div class="card-description">
+              <h4 class="card-title profile-name">Walker Fedora</h4>
+              <h5 class="card-title profile-band">Senior Project Manager</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-custom">
+            <div class="card-imgage">
+              <img class="card-img rounded-circle1" src="https://picsum.photos/200/200" alt="Card image cap">
+            </div>
+            <div class="card-description">
+              <h4 class="card-title profile-name">Ramirez Glasgow</h4>
+              <h5 class="card-title profile-band">Senior Project Manager</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column3">
+      <div class="section4">
+        <h4 class="heading">Change Password</h4>
+        <h6 class="description">Check out each collumn for more details</h6>
+
+        <form [formGroup] = "changePassword">
+          <div class="form-group">
+            <label class="form-labl">New password</label>
+            <input id="newPwd"  class="form-control" formControlName="password" type="password" />
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-message" *ngIf="changePassword.get('password').hasError(error.type) && (changePassword.get('password').dirty || changePassword.get('password').touched)">
+                    {{ error.message }}
+                </div>
+              </ng-container>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-labl">Repeat password</label>
+            <input id="confirmPwd" class="form-control" formControlName="confirmpassword" type="password" />
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.confirmpassword">
+                <div class="error-message" *ngIf="changePassword.get('confirmpassword').hasError(error.type) && (changePassword.get('confirmpassword').dirty || changePassword.get('confirmpassword').touched)">
+                      {{ error.message }}
+                </div>
+              </ng-container>
+              </div>
+          </div>
+          <ng-container *ngIf="changePassword.errors">
+            <div  class="error-message">New password and Repeat password should be same. </div>
+          </ng-container>
+          <button class="button submit-btn" [disabled]="!changePassword.valid">Submit</button>
+          <div class="form-note">Need to contain at least one uppercase (return the result here)</div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
